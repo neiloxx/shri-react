@@ -31,6 +31,5 @@
   background: url("../../assets/icons/cart.svg") center center no-repeat;
   width: 32px;
   height: 32px;
-  fill: var(--nav-text-color);
   display: block;
 }
