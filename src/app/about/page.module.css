@@ -1,0 +1,24 @@
+.main {
+  max-width: var(--max-width-l);
+  width: 100%;
+  padding: 24px 32px;
+}
+
+.section {
+  background-color: var(--light-background);
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+
+.title {
+  color: var(--dark-text-color);
+}
+
+.text {
+  font-size: 16px;
+  line-height: 24px;
+}
