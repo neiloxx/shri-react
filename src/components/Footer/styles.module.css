@@ -1,0 +1,22 @@
+.footerContainer {
+  width: 100%;
+  background-color: var(--secondary-background);
+}
+
+.footer {
+  padding: 0 32px;
+  margin: 0 auto;
+  height: 86px;
+  max-width: var(--max-width-l);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  font-family: var(--font-main);
+  color: var(--nav-text-color);
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+}

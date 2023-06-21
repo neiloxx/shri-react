@@ -1,0 +1,36 @@
+.headerContainer {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: var(--secondary-background);
+}
+
+.header {
+  padding: 0 32px;
+  margin: 0 auto;
+  height: 84px;
+  max-width: var(--max-width-l);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  font-family: var(--font-main);
+  color: var(--nav-text-color);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.cartWrapper {
+
+}
+
+.cart {
+  background: url("../../assets/icons/cart.svg") center center no-repeat;
+  width: 32px;
+  height: 32px;
+  fill: var(--nav-text-color);
+  display: block;
+}
