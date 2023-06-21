@@ -3,8 +3,10 @@
 
   --primary-background: #F5F5F5;
   --secondary-background: #333333;
+  --light-background: #FFFFFF;
 
-  --nav-text-color: #ffffff;
+  --light-text-color: #FFFFFF;
+  --dark-text-color: #1B1F23;
 
   --font-main: 'Roboto', sans-serif;
 }

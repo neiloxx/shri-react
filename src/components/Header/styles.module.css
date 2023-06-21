@@ -17,7 +17,7 @@
 
 .link {
   font-family: var(--font-main);
-  color: var(--nav-text-color);
+  color: var(--light-text-color);
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
