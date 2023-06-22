@@ -1,0 +1,36 @@
+.group {
+  padding: 24px;
+  background-color: var(--light-background);
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.title {
+  color: var(--dark-text-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.groupItem {
+  transition: max-height .1s ease-in-out, padding-top  .1s ease-in-out;
+  max-height: 0;
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.visible {
+  padding-top: 16px;
+  max-height: 500px;
+}
+
+.item {
+  padding-right: 32px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--dark-text-color);
+}

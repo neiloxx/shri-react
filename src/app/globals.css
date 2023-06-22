@@ -8,7 +8,7 @@
   --light-text-color: #FFFFFF;
   --dark-text-color: #1B1F23;
 
-  --font-main: 'Roboto', sans-serif;
+  --font-main: var(--font-roboto);
 }
 
 * {
@@ -27,7 +27,7 @@ body {
 
 body {
   position: relative;
-  font-family: var(--font-main);
+  font-family: var(--font-roboto);
 }
 
 a {
