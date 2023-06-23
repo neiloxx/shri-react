@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { moviesApi } from './services/moviesApi';
-import { cartReducer } from './feature/cart';
+import { moviesApi } from 'redux/services/moviesApi';
+import { cartReducer } from 'redux/feature/cart';
 
 export const store = configureStore({
   reducer: {

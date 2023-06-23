@@ -24,13 +24,23 @@
   line-height: 38px;
 }
 
-.cartWrapper {
-
+.ticketsCounter {
+  background-color: var(--btn-color);
+  color: var(--light-text-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 4px;
+  min-width: 28px;
+  min-height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cart {
-  background: url("../../assets/icons/cart.svg") center center no-repeat;
-  width: 32px;
-  height: 32px;
-  display: block;
+.cartWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }

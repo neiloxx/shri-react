@@ -1,12 +1,12 @@
 import minus from 'assets/icons/minus.svg';
 import plus from 'assets/icons/plus.svg';
-import { Button } from '../Button/Button';
+import { Button } from 'components/Button/Button';
 
 import styles from './styles.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectProductAmount } from '../../redux/feature/cart/selector';
-import { cartActions } from '../../redux/feature/cart';
-import { RootState } from '../../redux/store';
+import { selectProductAmount } from 'redux/feature/cart/selector';
+import { cartActions } from 'redux/feature/cart';
+import { RootState } from 'redux/store';
 
 interface TicketCounterProps {
   id: string;
