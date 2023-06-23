@@ -1,0 +1,8 @@
+.button {
+  border-radius: 4px;
+}
+
+.buttonsWrapper {
+  display: flex;
+  gap: 8px;
+}

@@ -1,5 +1,5 @@
-.temp {
-  height: 200px;
-  width: 300px;
-  background-color: antiquewhite;
+.main {
+  padding: 24px 32px;
+  max-width: var(--max-width-l);
+  width: 100%;
 }

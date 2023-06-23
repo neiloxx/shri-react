@@ -1,18 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { Movie } from 'types/movieApi';
 
 const BASE_URL = 'http://localhost:3001/api';
-
-interface Movie {
-  title: string;
-  posterUrl: string;
-  releaseYear: number;
-  description: string;
-  genre: string;
-  id: string;
-  rating: number;
-  director: string;
-  reviewIds: string[];
-}
 
 export const moviesApi = createApi({
   reducerPath: 'movieApi',
@@ -21,3 +10,18 @@ export const moviesApi = createApi({
     getMovies: builder.query<Movie[], void>({ query: () => 'movies' }), // getMovie: builder.query({ query: (movieId) => '' }),
   }),
 });
+
+//
+// Дефолтно запускается сервер на http://localhost:3001.
+//
+//   Кинотеатры:
+//     http://localhost:3001/api/cinemas
+//
+//       Фильмы:
+//         http://localhost:3001/api/movies - все фильмы
+//           http://localhost:3001/api/movies?cinemaId={айдишка кинотеатра} - фильмы в конкретном кинотеатре
+//             http://localhost:3001/api/movie?movieId={айдишка фильма} - конкретный фильм
+//
+//               Отзывы:
+//                 http://localhost:3001/api/reviews - все отзывы
+//                   http://localhost:3001/api/reviews?movieId={айдишка фильма} - отзывы конкретного фильма

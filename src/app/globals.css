@@ -9,6 +9,12 @@
   --dark-text-color: #1B1F23;
 
   --font-main: var(--font-roboto);
+
+  --btn-color: #FF5500;
+  --btn-color-hover: #f55503;
+  --btn-color-active: #ff6a1a;
+  --btn-color-disabled: #FFA375;
+
 }
 
 * {

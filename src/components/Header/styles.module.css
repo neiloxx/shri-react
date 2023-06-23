@@ -3,6 +3,7 @@
   position: sticky;
   top: 0;
   background-color: var(--secondary-background);
+  z-index: 100;
 }
 
 .header {
