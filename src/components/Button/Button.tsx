@@ -7,12 +7,29 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string | string[];
   disabled?: boolean;
+  alt?: string;
+  isDeleteButton?: boolean;
 }
 
-export const Button = ({ iconSrc, onClick, className, disabled }: ButtonProps) => {
+export const Button = ({
+  iconSrc,
+  onClick,
+  className,
+  disabled,
+  alt,
+  isDeleteButton,
+}: ButtonProps) => {
   return (
-    <button className={classNames(styles.button, className)} onClick={onClick} disabled={disabled}>
-      {iconSrc && <Image src={iconSrc} alt="" width={12} height={12} />}
+    <button
+      className={classNames(
+        styles.button,
+        className,
+        isDeleteButton ? styles.deleteButton : iconSrc ? styles.iconButton : styles.textButton
+      )}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {iconSrc && <Image src={iconSrc} alt={alt ? alt : ''} fill />}
     </button>
   );
 };

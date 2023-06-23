@@ -15,6 +15,10 @@ export interface TicketCardProps {
   genre: string;
   id: string;
   posterUrl: string;
+  isDeletable?: boolean;
 }
 
-export type CartState = { [x: string]: number };
+export type CartState = {
+  items: { [x: string]: number };
+  totalCount: number;
+};

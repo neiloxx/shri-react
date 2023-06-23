@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { CartState } from 'types/movieApi';
 
 const initialState: CartState = {
+  items: {},
   totalCount: 0,
 };
 
@@ -10,12 +11,12 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     increment: (state, { payload }) => {
-      const count = state[payload] || 0;
-      state[payload] = count + 1;
+      const count = state.items[payload] || 0;
+      state.items[payload] = count + 1;
       state.totalCount += 1;
     },
     decrement: (state, { payload }) => {
-      const count = state[payload];
+      const count = state.items[payload];
 
       if (!count) {
         return;
@@ -23,11 +24,16 @@ const cartSlice = createSlice({
       state.totalCount -= 1;
 
       if (count === 1) {
-        delete state[payload];
+        delete state.items[payload];
         return;
       }
 
-      state[payload] = count - 1;
+      state.items[payload] = count - 1;
+    },
+    deleteItem: (state, { payload }) => {
+      const count = state.items[payload];
+      state.totalCount -= count;
+      delete state.items[payload];
     },
     reset: () => initialState,
   },

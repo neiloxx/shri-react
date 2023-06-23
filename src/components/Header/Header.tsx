@@ -3,13 +3,13 @@ import styles from './styles.module.css';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { RootState } from 'redux/store';
-import { selectProductAmount } from 'redux/feature/cart/selector';
+import { selectCartTotalCount } from 'redux/feature/cart/selector';
 import Image from 'next/image';
 
 import cartIcon from 'assets/icons/cart.svg';
 
 export const Header = () => {
-  const totalTickets = useSelector((state: RootState) => selectProductAmount(state, 'totalCount'));
+  const totalTickets = useSelector((state: RootState) => selectCartTotalCount(state));
 
   return (
     <div className={styles.headerContainer}>
