@@ -13,12 +13,16 @@
 
 .button:hover {
   background-color: var(--btn-color-hover);
+  border-color: var(--btn-color-hover);
 }
 
 .button:active {
   background-color: var(--btn-color-active);
+  border-color: var(--btn-color-active);
 }
 
 .button:disabled {
   background-color: var(--btn-color-disabled);
+  border-color: var(--btn-color-disabled);
+  cursor: default;
 }

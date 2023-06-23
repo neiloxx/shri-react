@@ -6,11 +6,12 @@ interface ButtonProps {
   iconSrc?: string;
   onClick?: () => void;
   className?: string | string[];
+  disabled?: boolean;
 }
 
-export const Button = ({ iconSrc, onClick, className }: ButtonProps) => {
+export const Button = ({ iconSrc, onClick, className, disabled }: ButtonProps) => {
   return (
-    <button className={classNames(styles.button, className)} onClick={onClick}>
+    <button className={classNames(styles.button, className)} onClick={onClick} disabled={disabled}>
       {iconSrc && <Image src={iconSrc} alt="" width={12} height={12} />}
     </button>
   );

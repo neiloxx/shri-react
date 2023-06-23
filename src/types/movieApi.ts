@@ -16,3 +16,5 @@ export interface TicketCardProps {
   id: string;
   posterUrl: string;
 }
+
+export type CartState = { [x: string]: number };
