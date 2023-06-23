@@ -2,7 +2,6 @@
   padding: 24px;
   background-color: var(--light-background);
   border-radius: 8px;
-  cursor: pointer;
   position: relative;
 }
 
@@ -13,6 +12,7 @@
   line-height: 32px;
   display: flex;
   align-items: center;
+  cursor: pointer;
   justify-content: space-between;
 }
 

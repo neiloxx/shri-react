@@ -41,10 +41,15 @@ Accordion.Group = function MenuGroup({ children, title }: Props) {
   const { activeGroup, switchGroup } = useContext(AccordionContext);
 
   return (
-    <div className={styles.group} onClick={() => switchGroup(title)}>
-      <h3 className={styles.title}>
+    <div className={styles.group}>
+      <h3 onClick={() => switchGroup(title)} className={styles.title}>
         {title}
-        <Image src={activeGroup === title ? arrowUp : arrowDown} alt="" />
+        <Image
+          src={activeGroup === title ? arrowUp : arrowDown}
+          alt="arrow"
+          height={32}
+          width={32}
+        />
       </h3>
       {
         <div className={classNames(activeGroup === title && styles.visible, styles.groupItem)}>
