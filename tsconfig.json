@@ -29,18 +29,10 @@
     ],
     "baseUrl": "src/",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@assets/": [
-        "assets/*"
-      ],
-      "@redux/": [
-        "redux/*"
-      ],
-      "@types/": [
-        "types/*"
-      ]
+      "/*": ["./src/*"],
+      "assets/": ["assets/*"],
+      "redux/": ["redux/*"],
+      "types/": ["types/*"]
     }
   },
   "include": [

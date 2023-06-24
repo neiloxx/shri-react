@@ -1,8 +1,8 @@
-export interface Movie {
+export interface IMovie {
   title: string;
   posterUrl: string;
   releaseYear: number;
-  description?: string;
+  description: string;
   genre: string;
   id: string;
   rating: number;

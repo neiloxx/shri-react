@@ -5,14 +5,14 @@ import { useSelector } from 'react-redux';
 import { RootState } from 'redux/store';
 import { selectCartItems, selectCartTotalCount } from 'redux/feature/cart/selector';
 import { TicketsField } from 'components/TicketsField/TicketsField';
-import { Movie, TicketCardProps } from 'types/movieApi';
+import { IMovie, TicketCardProps } from 'types/movieApi';
 
 function GetCartItems(): TicketCardProps[] {
   const { data } = moviesApi.useGetMoviesQuery();
   const items = useSelector((state: RootState) => selectCartItems(state));
 
   return data
-    ? data.reduce((acc: Movie[], curr) => {
+    ? data.reduce((acc: IMovie[], curr) => {
         if (curr.id in items) {
           acc.push(curr);
         }

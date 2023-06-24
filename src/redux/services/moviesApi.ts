@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { Movie } from 'types/movieApi';
+import { IMovie } from 'types/movieApi';
 
 const BASE_URL = 'http://localhost:3001/api';
 
@@ -7,7 +7,8 @@ export const moviesApi = createApi({
   reducerPath: 'movieApi',
   baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
   endpoints: (builder) => ({
-    getMovies: builder.query<Movie[], void>({ query: () => 'movies' }), // getMovie: builder.query({ query: (movieId) => '' }),
+    getMovies: builder.query<IMovie[], void>({ query: () => 'movies' }),
+    getMovie: builder.query<IMovie, string>({ query: (id: string) => `movie?movieId=${id}` }),
   }),
 });
 
