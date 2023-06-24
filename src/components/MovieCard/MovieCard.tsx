@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './styles.module.css';
-import { TicketCounter } from '../TicketCounter/TicketCounter';
-import { IMovie } from '../../types/movieApi';
+import { TicketCounter } from 'components/TicketCounter/TicketCounter';
+import { IMovie } from 'types/movieApi';
 
 export const MovieCard = ({
   id,

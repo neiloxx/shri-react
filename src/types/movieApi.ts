@@ -22,3 +22,11 @@ export type CartState = {
   items: { [x: string]: number };
   totalCount: number;
 };
+
+export interface IReview {
+  id: string;
+  name: string;
+  text: string;
+  rating: number;
+  avatarUrl?: string;
+}

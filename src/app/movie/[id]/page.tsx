@@ -2,6 +2,7 @@
 import { moviesApi } from 'redux/services/moviesApi';
 import styles from './styles.module.css';
 import { MovieCard } from 'components/MovieCard/MovieCard';
+import { ReviewsField } from 'components/ReviewsField/ReviewsField';
 
 interface MovieProps {
   params: {
@@ -14,7 +15,12 @@ export default function Movie({ params }: MovieProps) {
 
   return (
     <main className={styles.main}>
-      {isLoading ? <p>Loading</p> : error ? <p>error</p> : data && <MovieCard {...data} />}
+      <div className={styles.movieWrapper}>
+        {isLoading ? <p>Loading</p> : error ? <p>error</p> : data && <MovieCard {...data} />}
+      </div>
+      <div className={styles.reviewsWrapper}>
+        <ReviewsField id={params.id} />
+      </div>
     </main>
   );
 }
