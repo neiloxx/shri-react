@@ -1,9 +1,11 @@
+type Genres = 'horror' | 'comedy' | 'fantasy' | 'action';
+
 export interface IMovie {
   title: string;
   posterUrl: string;
   releaseYear: number;
   description: string;
-  genre: string;
+  genre: Genres;
   id: string;
   rating: number;
   director: string;
@@ -12,7 +14,7 @@ export interface IMovie {
 
 export interface TicketCardProps {
   title: string;
-  genre: string;
+  genre: Genres;
   id: string;
   posterUrl: string;
   isDeletable?: boolean;

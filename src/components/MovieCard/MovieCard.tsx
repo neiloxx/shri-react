@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './styles.module.css';
 import { TicketCounter } from 'components/TicketCounter/TicketCounter';
 import { IMovie } from 'types/movieApi';
+import { translationMap } from 'utils/const';
 
 export const MovieCard = ({
   id,
@@ -23,7 +24,7 @@ export const MovieCard = ({
         </div>
         <ul className={styles.infoList}>
           <li className={styles.infoListItem}>
-            <b>Жанр:</b> {genre}
+            <b>Жанр:</b> {translationMap[genre]}
           </li>
           <li className={styles.infoListItem}>
             <b>Год выпуска:</b> {releaseYear}

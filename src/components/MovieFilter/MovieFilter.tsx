@@ -6,6 +6,7 @@ import { moviesApi } from 'redux/services/moviesApi';
 import { ICinema, IMovie } from 'types/movieApi';
 import { debounce } from 'utils/debounce';
 import { Dropdown } from 'components/Dropdown/Dropdown';
+import { translationMap } from '../../utils/const';
 
 interface MovieFilterProps {
   applyFilters: (filteredMovies: IMovie[]) => void;
@@ -38,13 +39,13 @@ function filter(
   }
 
   if (genre && result.length) {
-    result = result.filter((movie) => movie.genre === genre);
+    result = result.filter((movie) => translationMap[movie.genre] === genre);
   }
 
   return result;
 }
 
-const genreOptions = ['Ужасы', 'Комедия', 'Боевик', 'Фэнтези'];
+const genreOptions = ['Фэнтези', 'Комедия', 'Боевик', 'Ужасы'];
 
 export const MovieFilter = ({ applyFilters }: MovieFilterProps) => {
   const movies = moviesApi.useGetMoviesQuery();
