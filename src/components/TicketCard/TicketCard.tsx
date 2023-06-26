@@ -3,10 +3,7 @@ import styles from './styles.module.css';
 import Image from 'next/image';
 import { TicketCounter } from 'components/TicketCounter/TicketCounter';
 import { TicketCardProps } from 'types/movieApi';
-import closeIcon from 'assets/icons/close.svg';
-import { cartActions } from 'redux/feature/cart';
 import { useDispatch } from 'react-redux';
-import { Button } from 'components/Button/Button';
 import Link from 'next/link';
 
 export const TicketCard = ({ title, genre, id, posterUrl, isDeletable }: TicketCardProps) => {
@@ -31,16 +28,7 @@ export const TicketCard = ({ title, genre, id, posterUrl, isDeletable }: TicketC
           <p className={styles.genre}>{genre}</p>
         </Link>
       </div>
-      <TicketCounter id={id} />
-      {isDeletable && (
-        <Button
-          className={styles.deleteIcon}
-          iconSrc={closeIcon}
-          alt="delete"
-          onClick={() => dispatch(cartActions.deleteItem(id))}
-          isDeleteButton
-        />
-      )}
+      <TicketCounter id={id} isDeletable={isDeletable} />
     </article>
   );
 };

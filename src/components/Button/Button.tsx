@@ -9,6 +9,8 @@ interface ButtonProps {
   disabled?: boolean;
   alt?: string;
   isDeleteButton?: boolean;
+  text?: string;
+  outlined?: boolean;
 }
 
 export const Button = ({
@@ -18,18 +20,22 @@ export const Button = ({
   disabled,
   alt,
   isDeleteButton,
+  text,
+  outlined,
 }: ButtonProps) => {
   return (
     <button
       className={classNames(
         styles.button,
         className,
-        isDeleteButton ? styles.deleteButton : iconSrc ? styles.iconButton : styles.textButton
+        isDeleteButton ? styles.deleteButton : iconSrc ? styles.iconButton : styles.textButton,
+        { [styles.outlined]: outlined }
       )}
       onClick={onClick}
       disabled={disabled}
     >
       {iconSrc && <Image src={iconSrc} alt={alt ? alt : ''} fill />}
+      {text && <p>{text}</p>}
     </button>
   );
 };

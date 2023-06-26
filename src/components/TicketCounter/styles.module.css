@@ -13,3 +13,32 @@
   font-weight: 700;
   line-height: 20px;
 }
+
+.deleteTitle {
+  color: var(--dark-text-color);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.deleteWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.deleteText {
+  color: var(--dark-text-color);
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 16px;
+}
+
+.btnsWrapper {
+  margin-top: 24px;
+  display: flex;
+  gap: 8px;
+}

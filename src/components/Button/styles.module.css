@@ -32,3 +32,36 @@
   border-color: var(--btn-color-disabled);
   cursor: default;
 }
+
+.textButton {
+  min-width: 50px;
+  height: 40px;
+  padding: 16px;
+  border: 1px solid var(--btn-color);
+  color: var(--light-text-color);
+  text-align: center;
+  font-size: 14px;
+  background-color: var(--btn-color);
+  font-weight: 500;
+  line-height: 20px;
+  transition: background-color .2s ease-in-out;
+}
+
+.textButton:hover {
+  background-color: var(--btn-color-hover);
+  border-color: var(--btn-color-hover);
+}
+
+.outlined {
+  color: var(--btn-color);
+  background-color: var(--light-background);
+}
+
+.outlined:hover {
+  color: var(--light-text-color);
+}
+
+.textButton:active, .outlined:active {
+  background-color: var(--btn-color-active);
+  border-color: var(--btn-color-active);
+}
