@@ -1,0 +1,71 @@
+.dropdownWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  position: relative;
+}
+
+.label {
+  color: var(--dark-text-color);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.select {
+  padding: 10px;
+  color: var(--input-color-text);
+  border-radius: 8px;
+  border: 1px solid var(--input-color-border);
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select:focus {
+  border-color: var(--input-color-border-active);
+  color: var(--dark-text-color);
+}
+
+.select:active {
+  border-color: var(--input-color-border-active);
+}
+
+.active {
+  border-color: var(--input-color-border-active);
+}
+
+.placeholder {
+  color: var(--input-color-text);
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.placeholderActive {
+  color: var(--dark-text-color);
+}
+
+.optionsWrapper {
+  position: fixed;
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+  background-color: var(--light-background);
+  z-index: 500;
+  box-shadow: 0px 10px 22px -4px rgba(27, 31, 35, 0.12);
+}
+
+.option {
+  padding: 12px;
+  color: var(--dark-text-color);
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: var(--btn-color-disabled);
+}

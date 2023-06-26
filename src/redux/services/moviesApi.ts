@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IMovie, IReview } from 'types/movieApi';
+import { ICinema, IMovie, IReview } from 'types/movieApi';
 
 const BASE_URL = 'http://localhost:3001/api';
 
@@ -12,6 +12,7 @@ export const moviesApi = createApi({
     getReviewByMovieId: builder.query<IReview[], string>({
       query: (id: string) => `reviews?movieId=${id}`,
     }),
+    getCinemas: builder.query<ICinema[], void>({ query: () => 'cinemas' }),
   }),
 });
 

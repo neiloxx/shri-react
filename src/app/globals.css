@@ -15,6 +15,9 @@
   --btn-color-active: #ff6a1a;
   --btn-color-disabled: #FFA375;
 
+  --input-color-text: #999FA6;
+  --input-color-border: #E1E3E6;
+  --input-color-border-active: #FF5500;
 }
 
 * {

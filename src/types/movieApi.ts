@@ -30,3 +30,9 @@ export interface IReview {
   rating: number;
   avatarUrl?: string;
 }
+
+export interface ICinema {
+  id: string;
+  name: string;
+  movieIds: string[];
+}
