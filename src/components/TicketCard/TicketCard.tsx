@@ -15,6 +15,7 @@ export const TicketCard = ({ title, genre, id, posterUrl, isDeletable }: TicketC
           src={posterUrl}
           alt={title}
           fill
+          sizes="(max-width: 100px)"
           style={{
             objectFit: 'cover',
           }}

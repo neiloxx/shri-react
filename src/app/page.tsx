@@ -1,6 +1,6 @@
 'use client';
 
-import { useLayoutEffect, useState } from 'react';
+import { useCallback, useLayoutEffect, useState } from 'react';
 import { moviesApi } from 'redux/services/moviesApi';
 import { TicketsField } from 'components/TicketsField/TicketsField';
 import { MovieFilter } from 'components/MovieFilter/MovieFilter';
@@ -15,9 +15,11 @@ export default function Home() {
     data && setMovies(data);
   }, [data]);
 
+  const applyFilters = useCallback((filteredMovies: IMovie[]) => setMovies(filteredMovies), []);
+
   return (
     <main className={styles.main}>
-      <MovieFilter applyFilters={(filteredMovies) => setMovies(filteredMovies)} />
+      <MovieFilter applyFilters={applyFilters} />
       {isLoading ? (
         <p>Loading</p>
       ) : error ? (

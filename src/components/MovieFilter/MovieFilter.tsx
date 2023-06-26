@@ -48,18 +48,18 @@ function filter(
 const genreOptions = ['Фэнтези', 'Комедия', 'Боевик', 'Ужасы'];
 
 export const MovieFilter = ({ applyFilters }: MovieFilterProps) => {
-  const movies = moviesApi.useGetMoviesQuery();
-  const cinemas = moviesApi.useGetCinemasQuery();
-  const cinemaOptions = cinemas.data && cinemas.data.map((it) => it.name);
+  const { data: movies } = moviesApi.useGetMoviesQuery();
+  const { data: cinemas } = moviesApi.useGetCinemasQuery();
+  const cinemaOptions = cinemas && cinemas.map((it) => it.name);
 
   const [title, setTitle] = useState<string>('');
   const [genre, setGenre] = useState<string>('');
   const [cinema, setCinema] = useState<string>('');
 
   useEffect(() => {
-    if (!movies.data || !cinemas.data) return;
-    applyFilters(filter(movies.data, cinemas.data, title, genre, cinema));
-  }, [title, genre, cinema]);
+    if (!movies || !cinemas) return;
+    applyFilters(filter(movies, cinemas, title, genre, cinema));
+  }, [title, genre, cinema, applyFilters, cinemas, movies]);
 
   return (
     <aside className={classNames(styles.movieFilter)}>
