@@ -2,12 +2,12 @@ import styles from './styles.module.css';
 import { TicketCardProps } from 'types/movieApi';
 import { TicketCard } from 'components/TicketCard/TicketCard';
 
-interface TicketsField {
+interface TicketsFieldProps {
   tickets: TicketCardProps[];
   isDeletable?: boolean;
 }
 
-export const TicketsField = ({ tickets, isDeletable }: TicketsField) => {
+export const TicketsField = ({ tickets, isDeletable }: TicketsFieldProps) => {
   return (
     <div className={styles.ticketsField}>
       {tickets.map((ticket) => {

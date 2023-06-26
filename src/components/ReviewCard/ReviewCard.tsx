@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import photoPlaceholder from 'assets/icons/photo.svg';
 
-export const ReviewCard = ({ id, name, text, rating, avatarUrl }: IReview) => {
+export const ReviewCard = ({ name, text, rating, avatarUrl }: IReview) => {
   const avatarSize = avatarUrl ? 100 : 32;
 
   return (

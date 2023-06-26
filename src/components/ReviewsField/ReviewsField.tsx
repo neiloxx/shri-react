@@ -3,12 +3,12 @@ import { ReviewCard } from 'components/ReviewCard/ReviewCard';
 import { IReview } from 'types/movieApi';
 import styles from './style.module.css';
 
-interface ReviewsField {
+interface ReviewsFieldProps {
   id: string;
 }
 
-export const ReviewsField = ({ id }: ReviewsField) => {
-  const { data, isLoading, error } = moviesApi.useGetReviewByMovieIdQuery(id);
+export const ReviewsField = ({ id }: ReviewsFieldProps) => {
+  const { data } = moviesApi.useGetReviewByMovieIdQuery(id);
 
   return (
     <div className={styles.reviewsWrapper}>
