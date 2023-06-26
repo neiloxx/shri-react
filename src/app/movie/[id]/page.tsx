@@ -16,7 +16,13 @@ export default function Movie({ params }: MovieProps) {
   return (
     <main className={styles.main}>
       <div className={styles.movieWrapper}>
-        {isLoading ? <p>Loading</p> : error ? <p>error</p> : data && <MovieCard {...data} />}
+        {isLoading ? (
+          <p className={styles.loading}>Loading</p>
+        ) : error ? (
+          <p>error</p>
+        ) : (
+          data && <MovieCard {...data} />
+        )}
       </div>
       <div className={styles.reviewsWrapper}>
         <ReviewsField id={params.id} />

@@ -8,10 +8,14 @@
   background-color: var(--light-background);
   min-height: 648px;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
 .reviewsWrapper {
   margin-top: 24px;
+}
+
+.loading {
+  align-self: center;
 }
